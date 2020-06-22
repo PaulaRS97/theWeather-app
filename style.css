@@ -66,13 +66,13 @@
     font-size: 130px;
     font-family: "Cabin", sans-serif;
     margin-top: 80px;
-    margin-right: -150px;
+    margin-left: 183px;
     color: white;
   }
   .current-temperature-celsius {
     font-size: 110px;
     margin-top: 80px;
-    margin-left: 35px;
+    margin-left: 0px;
     color: white;
     font-family: "Montaga", serif;
   }
