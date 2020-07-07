@@ -1,138 +1,122 @@
 .container {
-    border-radius: 40px;
-    border: 4px solid black;
-    font-family: "Lato", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-    max-width: 850px;
-    display: block;
-    position: relative;
-  
-  }
-  .current-date{
-    text-align: left;
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-    opacity: 0.9;
-    font-family: monospace;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 20px;
-    color: #919191;
-  }
-  
-  .W {
-    font-size: 40px;
-    color: #acecea;
-    font-weight: bold;
-  }
-  .form-inline {
-    display: inline-block;
-    margin-top: 25px;
-  }
-  #inlineFormInputName2 {
-    width: 290px;
-    border: #acecea;
-  }
-  #search-button {
-    background-color: #919191;
-    border: none;
-    font-weight: bold;
-  }
-  #f-button {
-    background-color: rgb(233, 170, 198);
-    border: none;
-    font-weight: bold;
-  }
-  
-  #f-button:hover {
-    color: black;
-  }
-  #current-location-button {
-    background-color: transparent;
-    border: none;
-  }
+  border-radius: 10px;
+  border: 4px solid white;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background: #C9CCD3;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: lighten;
+  max-width: 850px;
+  display: block;
+  position: relative;
+  box-shadow: 2.5px 2.5px #EC6E4C;
 
-  
-.city {
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: bold;
-    font-size: 60px;
-    color: #919191;
-    margin-top: 10px;
-    margin-left: 80px;
-  }
-.separation{
- 
-  font-size: 100px;
-  color: white;
+}
+.current-date{
+  text-align: left;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
   opacity: 0.9;
   font-family: monospace;
-  margin-top: 15px;
- margin-left: 100px
-
 }
-  .col-12 {
-    text-align: left;
-    margin-left: 70px;
-    font-size: 15px;
-    color: black;
-    font-weight: bold;
-    opacity: 0.9;
-    font-family: monospace;
-  }
 
-.current-emoji-temperature{
-  margin-top: -100px;
-}
-.current-temperature {
-  font-size: 120px;
-  font-family: "Cabin", sans-serif;
-  color: white;
+.title {
   text-align: center;
-  margin-right: 50px;
-  }
-
-.current-temperature-celsius {
-    font-size: 100px;
-    color: white;
-    font-family: monospace;
+  font-size: 20px;
+  color: black;
 }
+
+.W {
+  font-size: 40px;
+  color: #EC6E4C;
+  font-weight: bolder;
+}
+.form-inline {
+  display: inline-block;
+  margin-top: 25px;
+}
+#inlineFormInputName2 {
+  width: 290px;
+  border: #acecea;
+}
+#search-button {
+  background-color: black;
+  border: none;
+  font-weight: bold;
+}
+#search-button:hover{
+    color:#EC6E4C;
+}
+#f-button {
+  background-color: #EC6E4C;
+  border: none;
+  font-weight: bold;
+}
+
+#f-button:hover {
+  color: black;
+}
+#current-location-button {
+  background-color: transparent;
+  border: none;
+}
+
+
+.city {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 60px;
+  color:black;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.col-12 {
+  text-align: left;
+  margin-left: 70px;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  opacity: 0.9;
+  font-family: monospace;
+}
+
+
+.current-temperature {
+font-size: 120px;
+font-family: "Cabin", sans-serif;
+color: #F2F2F1;
+text-align: center;
+}
+.current-icon{
+margin-top: 90px;
+}
+
 
 .line{
-  margin-top: -100px;
+margin-top: -100px;
 }
 
 .days {
-    font-size: 25px;
-    color: #919191;
-    font-weight: bold;
-    margin-bottom: -12px;
-  }
- 
-.days:hover{
-    color:pink;
-    cursor: pointer;
-    font-size: 28px;
-    transition: ease-in;
-  }
-  
-  .watermark {
-    font-size: 22px;
-    opacity: 0.9;
-    text-align: center;
-    font-family: monospace;
-  }
-  
-  .currentDayScriptStyle {
-    margin-bottom: 0;
-  }
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: -12px;
+}
 
-  .open-source{
-    text-align: center;  
-  }
-  
+
+.watermark {
+  font-size: 22px;
+  opacity: 0.9;
+  text-align: center;
+  font-family: monospace;
+}
+
+.currentDayScriptStyle {
+  margin-bottom: 0;
+}
+
+.open-source{
+  text-align: center;  
+}
