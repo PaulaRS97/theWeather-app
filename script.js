@@ -14,11 +14,35 @@ let days = [
 ];
 
 day = days[now.getDay()];
+let date= now.getDate();
 let hour = now.getHours();
 let minutes = now.getMinutes();
 
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+let month = now.getMonth();
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+month = months[now.getMonth()];
+
+
 let currentTimeHour = document.querySelector("#current-day");
-currentTimeHour.innerHTML = `${day}, ${hour}:${minutes}, ${year}`;
+currentTimeHour.innerHTML = `${day} ${date}, ${month} ${year} | ${hour}:${minutes}`;
+
 
 //feature 2
 
@@ -42,7 +66,6 @@ form.addEventListener("submit", showCity);
 // feature 3
 
 let tempUnit = document.querySelector("#f-button");
-
 let temp = document.querySelector("#changeTemperature");
 let temp2 = temp.innerHTML;
 
@@ -54,13 +77,14 @@ function showFar() {
     temperature.innerHTML = `${newTemp}`;
     tempUnit.innerHTML = "°C";
   } else {
-    temperature.innerHTML = temp2;
+    temperature.innerHTML = `${temp2}`;
     tempUnit.innerHTML = "°F";
   }
 }
 tempUnit.addEventListener("click", showFar);
 
 // Show current temperature -- input value
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`;
 
   function apiTemperature(response) {
     let city = document.querySelector("#city-name");
@@ -68,6 +92,12 @@ tempUnit.addEventListener("click", showFar);
     let currentTemperature = Math.round(response.data.main.temp);
     let actualTemperature = document.querySelector("#changeTemperature");
     actualTemperature.innerHTML = `${currentTemperature}`;
+    let humidity = document.querySelector("#js-humidity");
+    humidity.innerHTML = `Humidity: ${response.data.main.humidity} %`;
+    let wind = document.querySelector("#js-wind");
+    wind.innerHTML= `Wind: ${response.data.wind.speed} km/h`;
+   
+
   }
 
 // get current location
@@ -85,3 +115,4 @@ function getCurrentPosition(event) {
 
 let buttonPosition = document.querySelector("#current-location-button");
 buttonPosition.addEventListener("click", getCurrentPosition);
+
