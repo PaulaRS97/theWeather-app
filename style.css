@@ -66,20 +66,25 @@
 
 .city {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 60px;
+  font-size: 65px;
   color:black;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-left: 70px;
 }
 
 .col-12 {
   text-align: left;
-  margin-left: 70px;
-  font-size: 15px;
+  margin-left: 20px;
+  font-size: 18px;
   color: black;
   font-weight: bold;
   opacity: 0.9;
   font-family: monospace;
+  margin-top: 0px;
+}
+
+.properties{
+  margin-top:-25px;
 }
 
 
@@ -88,9 +93,11 @@ font-size: 120px;
 font-family: "Cabin", sans-serif;
 color: #F2F2F1;
 text-align: center;
+margin-top: 20px;
 }
 .current-icon{
-margin-top: 90px;
+margin-top: -40px;
+margin-left: 50px;
 }
 
 
