@@ -74,7 +74,7 @@ function showFar() {
 
   if (tempUnit.innerHTML == "°F") {
     let newTemp = (temp2 * 9) / 5 + 32;
-    temperature.innerHTML = `${newTemp}`;
+    temperature.innerHTML = `${Math.round(newTemp)}`;
     tempUnit.innerHTML = "°C";
   } else {
     temperature.innerHTML = `${temp2}`;
@@ -90,14 +90,15 @@ let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${api
     let city = document.querySelector("#city-name");
     city.innerHTML = response.data.name;
     let currentTemperature = Math.round(response.data.main.temp);
+    temp2 = currentTemperature;
     let actualTemperature = document.querySelector("#changeTemperature");
     actualTemperature.innerHTML = `${currentTemperature}`;
     let humidity = document.querySelector("#js-humidity");
     humidity.innerHTML = `Humidity: ${response.data.main.humidity} %`;
     let wind = document.querySelector("#js-wind");
     wind.innerHTML= `Wind: ${response.data.wind.speed} km/h`;
-   
-
+    let iconElement = document.querySelector("#iconjs");
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   }
 
 // get current location
